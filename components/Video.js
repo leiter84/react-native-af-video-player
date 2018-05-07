@@ -370,27 +370,7 @@ class Video extends Component {
           // onBuffer={() => this.onBuffer()} // Callback when remote video is buffering
           onTimedMetadata={e => onTimedMetadata(e)} // Callback when the stream receive some metadata
         />
-        <Controls
-          ref={(ref) => { this.controls = ref }}
-          toggleMute={() => this.toggleMute()}
-          toggleFS={() => this.toggleFS()}
-          togglePlay={() => this.togglePlay()}
-          paused={paused}
-          muted={muted}
-          fullscreen={fullScreen}
-          loading={loading}
-          onSeek={val => this.seek(val)}
-          onSeekRelease={pos => this.onSeekRelease(pos)}
-          progress={progress}
-          currentTime={currentTime}
-          duration={duration}
-          logo={logo}
-          title={title}
-          more={!!onMorePress}
-          onMorePress={() => onMorePress()}
-          theme={theme}
-          inlineOnly={inlineOnly}
-        />
+
       </Animated.View>
     )
   }
