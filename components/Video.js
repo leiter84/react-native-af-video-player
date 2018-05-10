@@ -108,9 +108,7 @@ class Video extends Component {
     const { loop } = this.props
     if (!loop) this.pause()
     this.onSeekRelease(0)
-    this.setState({ currentTime: 0 }, () => {
-      if (!loop) this.controls.showControls()
-    })
+    this.setState({ currentTime: 0 })
   }
 
   onRotated({ window: { width, height } }) {
